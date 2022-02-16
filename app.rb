@@ -15,3 +15,7 @@ class BookmarkManager < Sinatra::Base
 
   run! if app_file == $0
 end 
+
+# As a user
+# So that I can quickly add websites 
+# Id like to save bookmarks from the browser itself
