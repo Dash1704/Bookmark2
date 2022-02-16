@@ -13,9 +13,15 @@ class BookmarkManager < Sinatra::Base
     erb :'bookmarks/index'
   end
 
+  get '/bookmarks/new' do
+    erb :"bookmarks/new" 
+  end
+
+  post '/bookmarks' do
+    Bookmark.create(url: params[:url])
+    redirect '/bookmarks'
+  end
+
   run! if app_file == $0
 end 
 
-# As a user
-# So that I can quickly add websites 
-# Id like to save bookmarks from the browser itself
