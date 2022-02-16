@@ -12,13 +12,13 @@ I want to save my bookmarks.
 ![Screenshot 2022-02-14 at 14 51 22](https://user-images.githubusercontent.com/79933323/153887888-13bed031-8785-4afd-b088-fb9ae223721d.png) 
 
 
-# To set up the database 
+# To set up the databases 
 
 Connect to psql
 
-Create the database using the psql command CREATE DATABASE bookmark_manager;
+Create the database using the psql command CREATE DATABASE bookmark_manager; and bookmark_manager_test;
 
-Connect to the database using the pqsl command \c bookmark_manager;
+Connect to the database using the pqsl command \c bookmark_manager; and bookmark_manager_test;
 
 Run the query we have saved in the file 01_create_bookmarks_table.sql
 
