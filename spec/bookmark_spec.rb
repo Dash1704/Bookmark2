@@ -1,10 +1,12 @@
-require 'bookmark'
+require_relative '../lib/bookmark'
 require 'database_helpers_spec'
 
 describe Bookmark do
   describe '.all' do
     it 'returns all bookmarks' do
+      
       connection = PG.connect(dbname: 'bookmark_manager_test')
+      
       bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
       Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
       Bookmark.create(url: "http://www.google.com", title: "Google")
@@ -28,7 +30,7 @@ describe Bookmark do
 
 
       expect(bookmark).to be_a Bookmark
-      expect(bookmark.id).to eq persisted_data.first['id']
+      expect(bookmark.id).to eq persisted_data['id']
       expect(bookmark.title).to eq 'Test Bookmark'
       expect(bookmark.url).to eq 'http://www.example.org'
      
